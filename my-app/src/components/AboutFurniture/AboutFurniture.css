@@ -1,0 +1,13 @@
+.about-furniture-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+img.furniture {
+    width: 30%;
+}
+
+div.text {
+    width: 40%;
+}
