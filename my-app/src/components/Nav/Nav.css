@@ -1,0 +1,33 @@
+nav {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+    gap: 70px;
+    padding: 50px 60px;
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav .nav-list {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: start;
+}
+ 
+.nav-list li:hover {
+    transform: scale(1.02);
+}
+
+.nav-list a {
+    color: white;
+    font-weight: 600;
+}

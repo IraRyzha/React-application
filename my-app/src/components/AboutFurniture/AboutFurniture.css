@@ -1,13 +1,30 @@
 .about-furniture-section {
     width: 100%;
-    height: auto;
+    height: 32vh;
     display: flex;
+    justify-content: space-between;
 }
 
 img.furniture {
-    width: 30%;
+    width: 32%;
+    height: 100%;
+}
+ 
+div.text {
+    width: 38%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 35px;
 }
 
-div.text {
-    width: 40%;
+div.text h3 {
+    letter-spacing: 5px;
+    margin: 0px 0px 20px;
+}
+
+div.text p {
+    color: rgb(152, 152, 152);
+    font-weight: 600;
+    margin: 0;
 }
