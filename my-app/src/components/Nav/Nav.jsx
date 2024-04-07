@@ -5,7 +5,7 @@ import closeBtn from './icon-close.svg'
 import "./Nav.scss";
 
 function Nav({ changePage }) {
-    const navNode = useRef(false) 
+    const navNode = useRef() 
     const [isMenu, setIsMenu] = useState(false)
 
     const navItems = [
