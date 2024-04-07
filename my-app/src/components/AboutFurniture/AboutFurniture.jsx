@@ -1,4 +1,4 @@
-import './AboutFurniture.css'
+import './AboutFurniture.scss'
 import furnitureDark from './image-about-dark.jpg'
 import furnitureLight from './image-about-light.jpg' 
 
@@ -16,7 +16,7 @@ function AboutFurniture() {
                 </p>
             </div>
             <img src={furnitureLight} alt="furniture-image" className="furniture" />
-        </div>
+        </div> 
     )
 }
 

@@ -1,0 +1,45 @@
+@use '../../scss/config.scss' as *; 
+
+@media screen and (min-width: 901px) {
+    .menu-btn {
+        display: none;
+    }
+    .nav-list {
+        @include flex-container(row, center, start, 40px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+       position: absolute;
+       left: 0;
+       right: 0;
+       margin: 0 auto;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .nav-list {
+        display: none
+    }
+}
+
+nav {
+    @include set-size(100%, auto);
+    @include flex-container(row, flex-start, center, 70px);
+    padding: 50px 60px;
+    position: absolute; 
+    top: 0;
+    .nav-list {
+        li {
+            @include flex-container(row, center, start, 40px);
+            &:hover {
+                transform: scale(1.02);
+            }
+            a {
+                color: $white;
+                font-weight: 600;
+            }
+        }
+    }
+} 

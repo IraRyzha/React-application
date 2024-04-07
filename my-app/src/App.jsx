@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './App.scss';
 import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home.jsx";
 
@@ -20,4 +20,4 @@ function App() {
 
 
 
-export default App;
+export default App; 
