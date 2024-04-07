@@ -42,7 +42,7 @@
     z-index: 100;
 }
 nav.modal {
-    @include set-size(20%, 50%);
+    @include set-size(50%, 50%);
     @include flex-container(column, center, center, 30px);
     background-color: $light-gray;
     border-radius: 25px;

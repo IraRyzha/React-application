@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import logo from './logo.svg'
 import menuBtn from './icon-hamburger.svg'
 import closeBtn from './icon-close.svg'
@@ -6,7 +6,7 @@ import "./Nav.scss";
 
 function Nav({ changePage }) {
     const navNode = useRef(false) 
-    const [isMenu, setIsMenu] = useState()
+    const [isMenu, setIsMenu] = useState(false)
 
     const navItems = [
         { name: 'home', url: '#' },
@@ -16,9 +16,14 @@ function Nav({ changePage }) {
         { name: 'test', url: '#' } 
     ] 
 
+    useEffect(() => {
+        if (navNode.current) {
+            isMenu ? navNode.current.classList.add('modal') : navNode.current.classList.remove('modal');
+        }
+    }, [isMenu]);
+
     const changeMenu = () => {
         setIsMenu(!isMenu)
-        navNode.current.classList.toggle('modal')
     }
 
     return ( 
