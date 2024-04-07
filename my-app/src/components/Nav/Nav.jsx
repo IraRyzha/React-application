@@ -16,7 +16,7 @@ function Nav({ changePage }) {
         { name: 'test', url: '#' } 
     ] 
 
-    const isMenuOpen = () => {
+    const changeMenu = () => {
         setIsMenu(!isMenu)
         navNode.current.classList.toggle('modal')
     }
@@ -25,8 +25,8 @@ function Nav({ changePage }) {
         <>
             {isMenu &&  <div className="nav-modal"></div>} 
             <nav ref={navNode}>
-                {isMenu && <img src={closeBtn} alt="close btn" className="close-btn" onClick={isMenuOpen} />}
-                {!isMenu && <img src={menuBtn} alt="menu button" className="menu-btn" onClick={isMenuOpen} />}
+                {isMenu && <img src={closeBtn} alt="close btn" className="close-btn" onClick={changeMenu} />}
+                {!isMenu && <img src={menuBtn} alt="menu button" className="menu-btn" onClick={changeMenu} />}
                 {!isMenu && <img src={logo} alt="logo" className="logo" />}
                 <ul className="nav-list">
                     {navItems.map(({ name, url }) => <li key={name} onClick={() => changePage(name)} ><a href={url}>{name}</a></li> )}
