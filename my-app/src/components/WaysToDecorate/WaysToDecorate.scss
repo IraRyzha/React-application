@@ -11,6 +11,19 @@
         .ways-section {
             @include set-size(44%, 68vh);
             padding: 30px 40px 85px;
+            .ways {
+                h1 {
+                    font-size: 41px;
+                }
+            }
+            .control-buttons {
+                @include set-size(29%, auto);
+                bottom: 0;
+                left: 0;
+                button {
+                    @include set-size(50%, 80px);
+                }
+            }
         }
     }
 }
@@ -23,8 +36,21 @@
             @include set-size(100%, auto);
         }
         .ways-section {
-            @include set-size(100%, 68vh);
-            padding: 30px 35px 75px;
+            @include set-size(100%, auto);
+            padding: 40px 35px 40px;
+            .ways {
+                h1 {
+                    font-size: 28px;
+                }
+            }
+            .control-buttons {
+                @include set-size(21%, auto);
+                top: -50px;
+                right: 0;
+                button {
+                    @include set-size(50%, 50px);
+                }
+            }
         }
     }
 }
@@ -41,7 +67,6 @@ div.ways-to-decorate {
         .ways {
             @include set-size(85%, auto);
             h1 {
-                font-size: 41px;
                 font-weight: 700;
                 margin: 0;
             }
@@ -57,8 +82,11 @@ div.ways-to-decorate {
                 &:hover {
                     transform: scale(1.02);
                 } 
+                &:hover a {
+                    color: $dark-gray;
+                }
                 a {
-                    color: $gray;;
+                    color: $black;
                     letter-spacing: 5px;
                     font-size: 21px;
                 } 
@@ -73,12 +101,8 @@ div.ways-to-decorate {
     } 
     
     .control-buttons {
-        @include set-size(29%, auto);
         position: absolute;
-        bottom: 0;
-        left: 0;
         button {
-            @include set-size(50%, 83px);
             background-color: $black;
             border: 2px solid $black;
         }

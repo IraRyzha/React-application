@@ -24,7 +24,7 @@
         div.text {
             @include set-size(100%, auto);
             @include flex-container(column, center);
-            padding: 85px 35px;
+            padding: 55px 35px;
         }
     }
 }

@@ -8,7 +8,7 @@ function App() {
 
   const changePage = (pageView) => {
     setPage(pageView)
-  }
+  } 
 
   return (
     <>
