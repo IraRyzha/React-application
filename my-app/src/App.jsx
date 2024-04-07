@@ -1,23 +1,23 @@
-import './App.css';
-import NavSection from "./components/NavSection/NavSection";
-import WaysToDecorate from "./components/WaysToDecorate/WaysToDecorate";
-import AboutFurniture from "./components/AboutFurniture/AboutFurniture";
+import { useState } from 'react';
+import './App.scss';
+import Nav from "./components/Nav/Nav";
+import Home from "./pages/Home/Home.jsx";
 
 function App() {
+  const [page, setPage] = useState('home')
+
+  const changePage = (pageView) => {
+    setPage(pageView)
+  } 
+
   return (
-    <header>
-      <NavSection />
-      <WaysToDecorate />
-
-      <AboutFurniture />
-
-    </header>
+    <>
+      <Nav changePage={changePage}/>
+      { page === 'home' && <Home/>}
+    </>
   );
 }
 
-//  Header
-//  Nav
-//  Ways to decorate
-//  About our furniture
 
-export default App;
+
+export default App; 
